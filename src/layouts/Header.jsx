@@ -47,28 +47,6 @@ function Header() {
           <span className="navtitle-md font-semibold text-white">Cart</span>
         </p>
         </div>
-        {/* <Navbar.Toggle />
-        <Navbar.Collapse>
-          <Navbar.Link active href="#">
-          <span className="text-sm text-white">
-            Deliver to
-          </span>
-          <span className="text-lg font-semibold dark:text-white">
-              Joy{" "}
-            </span>
-          </Navbar.Link>
-          <Navbar.Link href="#">
-            <p><span className="navtitle-sm text-white">
-            Deliver to<br />
-          </span>
-          <span className="navtitle-md font-semibold text-white">
-              Joy{" "}
-            </span></p>
-          </Navbar.Link>
-          <Navbar.Link href="#">Services</Navbar.Link>
-          <Navbar.Link href="#">Pricing</Navbar.Link>
-          <Navbar.Link href="#">Contact</Navbar.Link>
-        </Navbar.Collapse> */}
       </Navbar>
       <div className="items-left bg-slate-700">
         {/* Navigation */}
