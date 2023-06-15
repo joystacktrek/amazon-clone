@@ -2,7 +2,8 @@ import { Navbar } from "flowbite-react";
 import Logo from "../components/Logo";
 import "../assets/styles/index.css";
 
-function Header() {
+// props is destructured
+function Header({ name }) {
   return (
     <header className="">
       <Navbar fluid className="!bg-black">
@@ -13,7 +14,9 @@ function Header() {
               Deliver to
               <br />
             </span>
-            <span className="navtitle-md font-semibold text-white">Joy </span>
+            <span className="navtitle-md font-semibold text-white">
+              {name}{" "}
+            </span>
           </p>
 
           {/* Search Bar */}
@@ -27,25 +30,27 @@ function Header() {
           </div>
         </Navbar.Brand>
         <div className="flex items-center ml-4 rounded-lg p-2">
-        <p className="leading-none pr-7">
-          <span className="navtitle-sm text-white">
-            Hello Joy,
-            <br />
-          </span>
-          <span className="navtitle-md font-semibold text-white">
-            Accounts & Lists{" "}
-          </span>
-        </p>
-        <p className="leading-none pr-7">
-          <span className="navtitle-sm text-white">
-            Returns
-            <br />
-          </span>
-          <span className="navtitle-md font-semibold text-white">& Orders</span>
-        </p>
-        <p className="leading-none pr-7">
-          <span className="navtitle-md font-semibold text-white">Cart</span>
-        </p>
+          <p className="leading-none pr-7">
+            <span className="navtitle-sm text-white">
+              Hello {name},
+              <br />
+            </span>
+            <span className="navtitle-md font-semibold text-white">
+              Accounts & Lists{" "}
+            </span>
+          </p>
+          <p className="leading-none pr-7">
+            <span className="navtitle-sm text-white">
+              Returns
+              <br />
+            </span>
+            <span className="navtitle-md font-semibold text-white">
+              & Orders
+            </span>
+          </p>
+          <p className="leading-none pr-7">
+            <span className="navtitle-md font-semibold text-white">Cart</span>
+          </p>
         </div>
       </Navbar>
       <div className="items-left bg-slate-700">
