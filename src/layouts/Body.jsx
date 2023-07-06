@@ -56,7 +56,7 @@ const items = [
 ];
 
 function Body() {
-  const { setCart } = useContext(CartContext);
+  const { dispatch } = useContext(CartContext);
 
   //className="container wrapper columns-3xs"
   return (
@@ -82,9 +82,10 @@ function Body() {
           <div className="items-center justify-center space-y-4 sm:flex sm:space-x-4 sm:space-y-0">
             <button
               onClick={() => {
-                setCart((cart) => {
-                  const item = { id: new Date().getTime(), title };
-                  return cart.concat(item);
+                const item = { id: new Date().getTime(), title };
+                dispatch({
+                  type: "add_item",
+                  payload: item,
                 });
               }}
             >

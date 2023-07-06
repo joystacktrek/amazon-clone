@@ -16,7 +16,7 @@ function Header({ name }) {
     console.log(`counter: ${counterRef.current}`)
   }
   
-  const { cartSize } = useContext(CartContext)
+  const { cartSize, dispatch } = useContext(CartContext)
 
   return (
     <header className="">
@@ -63,6 +63,9 @@ function Header({ name }) {
           <p className="leading-none pr-7">
             <span className="navtitle-md font-semibold text-white">Cart ({cartSize})</span>
           </p>
+          <button onClick={() => {
+            dispatch({ type: 'clear_cart' })
+          }}>Clear</button>
         </div>
       </Navbar>
       <div className="items-left bg-slate-700">
