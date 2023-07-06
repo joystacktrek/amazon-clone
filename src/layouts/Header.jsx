@@ -7,28 +7,25 @@ function Header({ name }) {
   return (
     <header className="">
       <Navbar fluid className="!bg-black">
-        <Navbar.Brand href="https://amazon.com">
-          <Logo />
-          <p className="leading-none">
-            <span className="navtitle-sm text-white">
-              Deliver to
-              <br />
-            </span>
-            <span className="navtitle-md font-semibold text-white">
-              {name}{" "}
-            </span>
-          </p>
+        <Navbar.Brand href="https://amazon.com"></Navbar.Brand>
+        <Logo />
+        <p className="leading-none">
+          <span className="navtitle-sm text-white">
+            Deliver to
+            <br />
+          </span>
+          <span className="navtitle-md font-semibold text-white">{name} </span>
+        </p>
 
-          {/* Search Bar */}
-          <div className="flex items-center ml-4 rounded-lg p-2">
-            <input
-              type="text"
-              placeholder="Search"
-              className="w-96 outline-nonet"
-            />
-            <button className="ml-2 bg-yellow-300">Search</button>
-          </div>
-        </Navbar.Brand>
+        {/* Search Bar */}
+        <div className="flex items-center ml-4 rounded-lg p-2">
+          <input
+            type="text"
+            placeholder="Search"
+            className="w-96 outline-nonet"
+          />
+          <button className="ml-2 bg-yellow-300">Search2</button>
+        </div>
         <div className="flex items-center ml-4 rounded-lg p-2">
           <p className="leading-none pr-7">
             <span className="navtitle-sm text-white">
