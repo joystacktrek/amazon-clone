@@ -1,7 +1,8 @@
 import { Navbar } from "flowbite-react";
 import Logo from "../components/Logo";
 import "../assets/styles/index.css";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
+import { CartContext } from "../contexts/CartContext";
 
 // props is destructured
 function Header({ name }) {
@@ -14,6 +15,8 @@ function Header({ name }) {
     counterRef.current = counterRef.current + 1;
     console.log(`counter: ${counterRef.current}`)
   }
+  
+  const { cartSize } = useContext(CartContext)
 
   return (
     <header className="">
@@ -58,7 +61,7 @@ function Header({ name }) {
             </span>
           </p>
           <p className="leading-none pr-7">
-            <span className="navtitle-md font-semibold text-white">Cart</span>
+            <span className="navtitle-md font-semibold text-white">Cart ({cartSize})</span>
           </p>
         </div>
       </Navbar>
