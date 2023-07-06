@@ -1,9 +1,20 @@
 import { Navbar } from "flowbite-react";
 import Logo from "../components/Logo";
 import "../assets/styles/index.css";
+import { useRef } from "react";
 
 // props is destructured
 function Header({ name }) {
+  const searchRef = useRef();
+  const counterRef = useRef(0);
+
+  const onSearchClick = () => {
+    console.log(searchRef?.current.value)
+
+    counterRef.current = counterRef.current + 1;
+    console.log(`counter: ${counterRef.current}`)
+  }
+
   return (
     <header className="">
       <Navbar fluid className="!bg-black">
@@ -20,11 +31,12 @@ function Header({ name }) {
         {/* Search Bar */}
         <div className="flex items-center ml-4 rounded-lg p-2">
           <input
+            ref={searchRef}
             type="text"
             placeholder="Search"
             className="w-96 outline-nonet"
           />
-          <button className="ml-2 bg-yellow-300">Search2</button>
+          <button className="ml-2 bg-yellow-300" onClick={onSearchClick}>Search {counterRef.current}</button>
         </div>
         <div className="flex items-center ml-4 rounded-lg p-2">
           <p className="leading-none pr-7">
