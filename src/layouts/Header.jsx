@@ -3,6 +3,35 @@ import Logo from "../components/Logo";
 import "../assets/styles/index.css";
 import { useContext, useRef } from "react";
 import { CartContext } from "../contexts/CartContext";
+import { Link } from 'react-router-dom'
+
+// 1st - beginner
+// const userName = "Johan"
+// const userAge = 26
+// console.log(`My name is ${userName} . I'm ${userName}`)
+
+// 2nd - mid
+// const user = { name: "Johan", age: 24 }
+
+// console.log(`My name is ${user.name} . I'm ${user.age}`)
+
+// 3rd - pro
+const { name, age } = { nam1: "Johan", age: 24 }
+
+console.log(`My name is ${name} . I'm ${age}`)
+
+
+// const arrayStudents = ["Rolando", "Chris", "Jerrico"]
+
+// let a, b, c, rest;
+// [a, b, c] = [10, 20, 15];
+
+
+// [a, b, ...rest] = [10, 20, 30, 40, 50];
+
+//console.log(rest);
+// Expected output: Array [30, 40, 50]
+
 
 // props is destructured
 function Header({ name }) {
@@ -71,15 +100,15 @@ function Header({ name }) {
       <div className="items-left bg-slate-700">
         {/* Navigation */}
         <div className="ml-auto p-2">
-          <a href="#" className="text-white hover:text-black ml-4">
+          <Link to="products" className="text-white hover:text-black ml-4">
             All
-          </a>
-          <a href="#" className="text-white hover:text-black ml-4">
-            Today's Deal
-          </a>
-          <a href="#" className="text-white hover:text-black ml-4">
+          </Link>
+          <Link to="products/deals" className="text-white hover:text-black ml-4">
+            Today&apos;s Deal
+          </Link>
+          <Link to="buy" className="text-white hover:text-black ml-4">
             Buy Again
-          </a>
+          </Link>
         </div>
       </div>
     </header>
